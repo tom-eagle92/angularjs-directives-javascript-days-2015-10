@@ -10,10 +10,11 @@ angular.module('myApp')
           }
         });
 
-
-        element
-          .val(27)
-          .trigger('change');
+        ngModel.$render = function() {
+          element
+            .val(ngModel.$viewValue)
+            .trigger('change');
+        }
 
       }
     }
