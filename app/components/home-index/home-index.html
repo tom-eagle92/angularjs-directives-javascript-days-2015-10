@@ -1,6 +1,28 @@
-<knob ng-model="value" required></knob>
+<form name="form">
+  <input name="password" type="text" ng-model="password" required>
 
-<input type="number" ng-model="value">
+  <div ng-show="form.password.$error.required">
+    Password required
+  </div>
+
+  <input name="passwordConfirmation" type="text" ng-model="passwordConfirmation" confirmation-validator="password">
+
+  <div ng-show="form.password.$error.passwordConfirmation">
+    Passwords do not match
+  </div>
+
+
+</form>
+
+
+
+<hr>
+
+<knob ng-model="homeIndex.knobValue"></knob>
+
+<input type="number" ng-model="homeIndex.knobValue">
+
+
 
 
 
