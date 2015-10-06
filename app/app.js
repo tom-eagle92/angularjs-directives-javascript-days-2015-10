@@ -5,5 +5,8 @@ angular.module('myApp', ['ngRoute'])
         templateUrl: 'components/home-index/home-index.html',
         controller: 'HomeIndexController',
         controllerAs: 'homeIndex'
+      })
+      .when('/hello', {
+        template: 'Hello World',
       });
   });

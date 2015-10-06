@@ -8,21 +8,20 @@ angular.module('myApp')
       bindToController: true,
       controllerAs: 'tabs',
       controller: function() {
-        var ctrl = this;
-        ctrl.allTabs = [];
-        ctrl.activeTab = undefined;
+        this.allTabs = [];
+        this.activeTab = undefined;
 
-        ctrl.selectTab = function(tab) {
-          ctrl.activeTab = tab;
-          angular.forEach(ctrl.allTabs, function(singleTab) {
+        this.selectTab = function(tab) {
+          this.activeTab = tab;
+          angular.forEach(this.allTabs, function(singleTab) {
             singleTab.active = false;
           });
           tab.active = true;
           console.log('Tab selected', tab)
         }
 
-        ctrl.addTab = function(tab) {
-          ctrl.allTabs.push(tab);
+        this.addTab = function(tab) {
+          this.allTabs.push(tab);
           console.log(tab.heading);
         }
       }
