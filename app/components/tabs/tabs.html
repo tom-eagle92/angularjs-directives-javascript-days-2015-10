@@ -1,0 +1,9 @@
+<ul class="nav nav-tabs" role="tablist">
+  <li ng-repeat="tab in tabs.allTabs"
+      ng-class="{ active: tab == tabs.activeTab }">
+    <a href ng-click="tabs.selectTab(tab)">{{tab.heading}}</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content" ng-transclude> </div>
