@@ -1,16 +1,22 @@
+<tabs>
+  <tab heading="Hallo">Welt</tab>
+</tabs>
+
+
+<hr>
+
 <form name="form">
   <input name="password" type="text" ng-model="password" required>
 
   <div ng-show="form.password.$error.required">
-    Password required
+    Please enter a password!
   </div>
 
   <input name="passwordConfirmation" type="text" ng-model="passwordConfirmation" confirmation-validator="password">
 
-  <div ng-show="form.password.$error.passwordConfirmation">
-    Passwords do not match
+  <div ng-show="form.passwordConfirmation.$error.passwordConfirmation">
+    Passwords do not match!
   </div>
-
 
 </form>
 
